@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
+import Home from './components/Home';
+import Notes from './components/Notes';
+import { AuthProvider, AuthContext } from './components/AuthContext'; // Import AuthProvider and AuthContext
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function ProtectedRoute({ element }) {
+  const { currentUser } = React.useContext(AuthContext);
+  return currentUser ? element : <Navigate to="/login" />;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/notes" element={<ProtectedRoute element={<Notes />} />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 

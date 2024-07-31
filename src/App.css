@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.history-item:hover {
+  background-color: #feffb2; /* Change to your desired hover color */
+}
