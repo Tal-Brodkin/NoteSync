@@ -17,7 +17,7 @@ function Home() {
                             <Link to="/login" className="btn btn-primary btn-lg d-block">LETS GO</Link>
                         </div>
                         <div className="mb-4">
-                            <p className="mt-2 small">Don't have an account? Register <Link to="/login">here</Link></p>
+                            <p className="mt-2 small">Don't have an account? Register <Link to="/register">here</Link></p>
                         </div>
                     </div>
                 </div>
