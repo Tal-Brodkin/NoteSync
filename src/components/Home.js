@@ -14,10 +14,10 @@ function Home() {
                             Stay organized and productive with our intuitive and easy-to-use interface.
                         </p>
                         <div className="mb-4">
-                            <Link to="/register" className="btn btn-primary btn-lg d-block">JOIN NOW</Link>
+                            <Link to="/login" className="btn btn-primary btn-lg d-block">LETS GO</Link>
                         </div>
                         <div className="mb-4">
-                            <p className="mt-2 small">Already a member? Log in <Link to="/login">here</Link></p>
+                            <p className="mt-2 small">Don't have an account? Register <Link to="/login">here</Link></p>
                         </div>
                     </div>
                 </div>

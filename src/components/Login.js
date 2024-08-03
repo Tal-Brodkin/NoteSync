@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { auth, signInWithEmailAndPassword } from '../firebase';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap'; // Import Spinner from react-bootstrap
 
 function Login() {
@@ -75,6 +75,11 @@ function Login() {
                 <button type="submit" className="btn btn-primary w-100" disabled={loading}>
                   {loading ? <Spinner animation="border" size="sm" /> : 'Login'}
                 </button>
+                <div className="text-center mb-2">
+                  <p className="m-3 small">
+                    Don't have an account? Register <Link to="/register">here</Link>
+                  </p>
+                </div>
               </form>
               {loginMessage && <div className="mt-3 alert alert-info">{loginMessage}</div>}
             </div>

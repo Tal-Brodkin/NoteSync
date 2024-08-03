@@ -40,3 +40,23 @@
 .history-item:hover {
   background-color: #feffb2; /* Change to your desired hover color */
 }
+
+.note-info {
+  padding: 1rem;
+}
+
+.category-work {
+  background-color: #d1e7dd; /* Example color for Work category */
+}
+
+.category-personal {
+  background-color: #f8d7da; /* Example color for Personal category */
+}
+
+.category-urgent {
+  background-color: #fff3cd; /* Example color for Urgent category */
+}
+
+.category-others {
+  background-color: #d1ecf1; /* Example color for Others category */
+}
