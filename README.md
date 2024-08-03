@@ -1,3 +1,8 @@
+Tal Brodkin
+ID 321921991
+
+Video showcasing the application: https://www.youtube.com/watch?v=QyagFg7aTlw
+
 
 In the project directory, you can run:
 
